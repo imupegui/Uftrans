@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>UFTRANS :: Viaja al Estudiar</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="keywords" content="" />
+	<script
+		type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<link rel="shortcut icon" href="images/logo-ConvertImage.ico">
+	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/main.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href='css/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/index.css" th:href="@{/css/index.css}">
+	<!-- Minified Bootstrap CSS -->
+	<!-- ... -->
+	<script type="text/javascript" src="/bower_components/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/bower_components/moment/min/moment.min.js"></script>
+	<script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet"
+		href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+
+	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+			});
+		});
+	</script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.de.js" charset="UTF-8"></script>
+</head>
+
+<body>
+	<div class="banner jarallax">
+		<div class="header">
+			<div class="header-left">
+				<div class="search-grid">
+				</div>
+			</div>
+		</div>
+		<div class="w3-header-bottom">
+			<div class="w3layouts-logo">
+				<img src="images/logo.jpg" height="60" alt="">
+			</div>
+			<div class="top-nav">
+				<nav class="navbar navbar-default">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="first-list"><a class="active" href="index.html">INICIO</a></li>
+							<li><a href="#welcome" class="scroll">REGÍSTRATE</a></li>
+							<li><a href="#about" class="scroll">¿CÓMO FUNCIONA?</a></li>
+							<li><a href="#contact" class="scroll">CONTÁCTENOS</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+
+			<div class="agileinfo-social-grids">
+				<ul>
+					<li><a href="https://www.facebook.com/1608315162646317/"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="https://twitter.com/UfTrans"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="https://instagram.com/uf.trans?igshid=q60oy356hbd8"><i class="fa fa-instagram"></i></a>
+					</li>
+				</ul>
+			</div>
+			<br>
+			<br>
+		</div>
+		<div class="banner-info">
+			<div class="container">
+				<div class="w3-banner-info">
+					<div class="slider">
+						<div class="callbacks_container">
+							<div class="row no-gutters">
+								<div class="col-12 col-sm-6 col-md-8">
+									<br><br><br><br><br><br><br><br><br><br><br><br><br>
+									<font size=6 color="white">¿Necesitas un transporte rápido, seguro y eficaz para ir a
+										tu universidad?solicítalo ahora mismo.</font>
+								</div>
+								<div class="col-6 col-md-4">
+									<div class="modal-dialog text-center">
+										<div class="col-sm-8 main-section">
+											<div class="modal-content">
+												<div class="col-12 user-img">
+													<img src="images/user.png" />
+												</div>
+												<form action="ruta.php" method="POST">
+													<div class="form-group">
+														<input type="text" name="nombres" class="form-control" required
+															placeholder="Nombres y Apellidos" />
+													</div>
+													<div class="form-group">
+														<input type="tel" name="telefonos" class="form-control" required
+															placeholder="Teléfono">
+													</div>
+													<div class="form-group">
+														<input type="email" name="emails" class="form-control" required
+															placeholder="Correo Electrónico" />
+													</div>
+													<!--Fecha-->
+													<div class="form-group">
+														<div class='input-group date' id='datetimepicker2'>
+															<input type='date' name="fecha" class="form-control"
+																required />
+															<span class="input-group-addon">
+																<span class="glyphicon glyphicon-calendar"></span>
+															</span>
+														</div>
+														<script type="text/javascript">
+															$(function () {
+																$('#datetimepicker2').datetimepicker({
+																	locale: 'ru'
+																});
+															});
+														</script>
+													</div>
+
+													<!--Fin_Fecha-->
+
+													<!--Hora-->
+													<div class="form-group">
+														<div class='input-group date' id='datetimepicker3'>
+															<input type='time' name="hora" class="form-control"
+																required />
+															<span class="input-group-addon">
+																<span class="glyphicon glyphicon-time"></span>
+															</span>
+														</div>
+														<script type="text/javascript">
+															$(function () {
+																$('#datetimepicker3').datetimepicker({
+																	format: 'LT'
+																});
+															});
+														</script>
+													</div>
+													<!--Fin_Hora-->
+
+													<button type="submit" class="btn btn-danger espacios"><i
+															class="fas fa-sign-in-alt"></i> ¡Solícitalo ya! </button>
+											</div>
+
+
+											</form>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<script>
+					// You can also use "$(window).load(function() {"
+					$(function () {
+						// Slideshow 4
+						$("#slider4").responsiveSlides({
+							auto: true,
+							pager: true,
+							nav: false,
+							speed: 400,
+							namespace: "callbacks",
+							before: function () {
+								$('.events').append("<li>before event fired.</li>");
+							},
+							after: function () {
+								$('.events').append("<li>after event fired.</li>");
+							}
+						});
+
+					});
+				</script>
+				<!--banner Slider starts Here-->
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<!-- //banner -->
+
+	<div class="welcome" id="welcome">
+		<div class="container">
+			<div class="wthree-heading">
+				<h2>¿ERES UNIVERSITARIO?</h2>
+				<br>
+				<br>
+			</div>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+
+						<div class="col-md-4">
+							<img src="images/gps.png" class="card-img" alt="..." style="width: 80%">
+						</div>
+						<div class="col-md-8">
+							<div class="card-body">
+								<br><br>
+								<p class="card-text">¿Eres un universitario, tienes un automóvil y deseas ganar un
+									dinero extra?</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-sm-4">
+						<br><br>
+						<button type="button" class="btn btn-danger btn-lg btn-rounded text-lg" data-toggle="modal"
+							data-target="#exampleModal"><i class="fab local_atm fa-2x pr-2"
+								aria-hidden="true"></i>REGISTRATE</button>
+						<br><br>
+					</div>
+				</div>
+			</div>
+
+			<br><br>
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+				aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h2 class="modal-title text-danger" id="exampleModalLabel">Registro de Vehículos</h2>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form action="universitario.php" action="ifttt.php" method="POST">
+
+								<div class="form-group">
+									<input type="text" name="nombre" class="form-control" required
+										placeholder="Nombres y Apellidos" />
+								</div>
+
+								<div class="form-group">
+									<input id="icon_telephone" name="telefono" type="tel" class="form-control" required
+										placeholder="Teléfono">
+								</div>
+
+								<div class="form-group">
+									<input type="email" name="email" class="form-control"
+										placeholder="Correo Electrónico" />
+								</div>
+								<div class='col-md-6'>
+									<div class="form-group">
+										<input type="name" name="placa" class="form-control" placeholder="Placa" />
+									</div>
+								</div>
+								<div class='col-md-6'>
+									<div class="form-group">
+										<input type="name" name="cvehiculo" class="form-control"
+											placeholder="Color del Vehículo" />
+									</div>
+								</div>
+								<!--Fecha-->
+								<div class="form-group">
+									<div class='input-group date' id='datetimepicker2'>
+										<input type='date' name="fecha" class="form-control" required />
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+									</div>
+									<script type="text/javascript">
+										$(function () {
+											$('#datetimepicker2').datetimepicker({
+												locale: 'ru'
+											});
+										});
+									</script>
+								</div>
+
+								<!--Fin_Fecha-->
+
+								<!--Horas-->
+								<div class='col-md-6'>
+									<div class="form-group">
+										<div class='input-group date' id='timepicker6'>
+											<input type='time' name="horaini" class="form-control" required />
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time"></span>
+											</span>
+										</div>
+									</div>
+								</div>
+								<div class='col-md-6'>
+									<div class="form-group">
+										<div class='input-group date' id='timepicker7'>
+											<input type='time' name="horafin" class="form-control" required />
+											<span class="input-group-addon">
+												<span class="glyphicon glyphicon-time"></span>
+											</span>
+										</div>
+									</div>
+								</div>
+
+								<script type="text/javascript">
+									$(function () {
+										$('#timepicker6').datetimepicker();
+										$('#timepicker7').datetimepicker({
+											useCurrent: false //Important! See issue #1075
+										});
+										$("#timepicker6").on("dp.change", function (e) {
+											$('#timepicker7').data("TimePicker").minDate(e.date);
+										});
+										$("#timepicker7").on("dp.change", function (e) {
+											$('#timepicker6').data("TimePicker").maxDate(e.date);
+										});
+									});
+								</script>
+								<!--Fin_Horas-->
+
+
+								<center><button type="submit" class="btn btn-danger">Registrar</button></center><br>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="about-bottom jarallax" id="about">
+			<div class="container" style="text-align:center;">
+				<video src="video/uft.mp4" height="500" autoplay muted loop></video>
+			</div>
+		</div>
+
+		<br><br><br>
+
+		<div class="container">
+			<div class="wthree-heading">
+				<h2>BENEFICIOS</h2>
+				<br><br>
+			</div>
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-12 col-sm-6 col-md-8">
+						<img src="images/tiempo.png" style="width: 10%">
+						<h5 class="card-title">Ahorrate el tiempo de espera de un autobus.</h5>
+					</div>
+					<div class="col-6 col-md-4">
+						<img src="images/bien.png" style="width: 20%">
+						<h5 class="card-title">Llega a tiempo a tus clases.</h5>
+						<br><br>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="about-bottom jarallax" id="about">
+		<div class="wthree-heading">
+			<h2 style="color: white">PROPÓSITO</h2>
+			<br><br>
+		</div>
+		<div class="container">
+			<font size=4 color="white" style="text-align:justify">Creemos que los buenos amigos se encuentran en
+				cualquier lugar, por eso te
+				brindamos una experiencia unica en el momento de viajar hacía tu universidad mediante una
+				plataforma donde podrás transportarte fácilmente o ganarás dinero extra por llevar a otros
+				universitarios.</font>
+		</div>
+	</div>
+	<div class="agileits-w3layouts-map">
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.154143010756!2d-75.92061968523755!3d4.7432589965550465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e386fe147557b65%3A0xaed871db23bdb5d8!2sInstituci%C3%B3n%20Educativa%20Gabo!5e0!3m2!1ses-419!2sco!4v1569290293172!5m2!1ses-419!2sco"
+			width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+	</div>
+	</div>
+	<footer>
+		<div class="w3ls-footer-grids" id="contact">
+			<div class="container">
+				<div class="col-md-3 w3l-footer one">
+					<h3>UFTRANS</h3>
+					<p> Transporte a tu Universidad desde tu CELULAR</p>
+					<p class="adam">- Diego Londoño, CEO</p>
+				</div>
+
+				<div class="col-md-3 w3l-footer two">
+					<h3>Redes Sociales</h3>
+					<ul>
+						<li><a href="https://www.facebook.com/1608315162646317/"><i
+									class="fa fa-facebook"></i>Facebook</a></li>
+						<li><a href="https://twitter.com/UfTrans"><i class="fa fa-twitter"></i>Twitter</a></li>
+						<li><a href="https://instagram.com/uf.trans?igshid=q60oy356hbd8"><i
+									class="fa fa-instagram"></i>Instagram</a>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3 w3l-footer three">
+					<h3>Información de Contácto</h3>
+					<ul>
+						<li><i class="fa fa-phone"></i>
+							<p>+57 318 490 80 66 - +57 317 435 90 77</p>
+						</li>
+						<li><i class="fa fa-envelope-o"></i><a href="">Contactenos@uftrans.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copy-right-grids">
+			<div class="container">
+				<div class="copy-left">
+					<p class="footer-gd">© 2019 UFTRANS | Design by <a href="" target="_blank">UFT</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- //footer -->
+	<script>
+
+		// Get the elements
+		var from_input = $('#startingDate').pickadate(),
+			from_picker = from_input.pickadate('picker')
+		var to_input = $('#endingDate').pickadate(),
+			to_picker = to_input.pickadate('picker')
+
+		// Check if there’s a “from” or “to” date to start with and if so, set their appropriate properties.
+		if (from_picker.get('value')) {
+			to_picker.set('min', from_picker.get('select'))
+		}
+		if (to_picker.get('value')) {
+			from_picker.set('max', to_picker.get('select'))
+		}
+
+		// Apply event listeners in case of setting new “from” / “to” limits to have them update on the other end. If ‘clear’ button is pressed, reset the value.
+		from_picker.on('set', function (event) {
+			if (event.select) {
+				to_picker.set('min', from_picker.get('select'))
+			} else if ('clear' in event) {
+				to_picker.set('min', false)
+			}
+		})
+		to_picker.on('set', function (event) {
+			if (event.select) {
+				from_picker.set('max', to_picker.get('select'))
+			} else if ('clear' in event) {
+				from_picker.set('max', false)
+			}
+		})
+
+	</script>
+	<script src="js/responsiveslides.min.js"></script>
+	<script src="js/jarallax.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>
+
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function () {
+			/*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+			$().UItoTop({ easingType: 'easeOutQuart' });
+
+		});
+	</script>
+
+	<!-- //here ends scrolling icon -->
+</body>
+
+</html>
